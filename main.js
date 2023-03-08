@@ -12,7 +12,7 @@ function desplegarListado(array){
         nuevoSeguroDiv.classList.add("col-12","col-md-6", "col-lg-5", "mb-2")
         nuevoSeguroDiv.innerHTML = `
         <div id="${seg.id}" class="card" style="width: 18rem;">
-        <img class="card-img-top img-fluid" style="height: 200px;"src="assets/iconos/np.jpg" alt="">
+        <img class="card-img-top img-fluid" style="height: 200px;"src="assets/iconos/${seg.imagen}" alt="">
         <div class="card-body">
             <h4 class="card-e">${seg.empresa}</h4>
             <p class = "card-e">Nombre: ${seg.nombre}</p>

@@ -12,7 +12,7 @@ function desplegarListado(array){
         nuevoSeguroDiv.classList.add("col-12","col-md-6", "col-lg-5", "mb-2")
         nuevoSeguroDiv.innerHTML = `
         <div id="${seg.id}" class="card" style="width: 18rem;">
-        <img class="card-img-top img-fluid" style="height: 200px;"src="assets/${seg.imagen}" alt="">
+        <img class="card-img-top img-fluid" style="height: 200px;"src="assets/iconos/np.jpg" alt="">
         <div class="card-body">
             <h4 class="card-e">${seg.empresa}</h4>
             <p class = "card-e">Nombre: ${seg.nombre}</p>
@@ -36,7 +36,7 @@ function desplegarListado(array){
 
 function buscarSeg(buscado, array){
     let busquedaListado = array.filter(
-        (seguro)=> seguro.empresa.toLowerCase().includes(buscado) || seguro.nombre.toLowerCase().includes(buscado) || seguro.precio.toLowerCase().includes(buscado) || seguro.tipo.toLowerCase().includes(buscado)
+        (seguro)=> seguro.empresa.toLowerCase().includes(buscado .toLowerCase() ) ||seguro.nombre.toLowerCase().includes(buscado .toLowerCase() ) || seguro.tipo.toLowerCase().includes(buscado .toLowerCase() )
     )
     if(busquedaListado.length == 0){
         coincidir.innerHTML = `<h4> No hay coincidencias con la busqueda</h4>`

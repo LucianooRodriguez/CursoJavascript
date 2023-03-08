@@ -32,19 +32,12 @@ h1{
 .tituloCard{
     color: rgba(156, 156, 213, 0.735);
 }
-.cardMraca{
-    padding-bottom: 7px;
-}
-.cardPrecio{
-    margin-bottom: 7px;
-}
 
 .row{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    
-    
+
 }
 #botonOscuro{
    font-size: 20px;

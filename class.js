@@ -6,33 +6,40 @@ class Seguro {
             this.precio = precio,
             this.tipo = tipo
             this.imagen = imagen
+            this.cantidad = 1
     }
-    
-    verElListado() {
-        console.log(`El seguro ${this.nombre} de la empresa  ${this.empresa} esta valuado en : $${this.precio}`)
+    sumarCantidad(){
+        this.cantidad = this.cantidad + 1
+        return this.cantidad
     }
-}
-const seguro1 = new Seguro(1, "Rio Uruguay Seguros", "basico", 8000, "economico","rus.png")
-const seguro2 = new Seguro(2, "Rio Uruguay Seguros", "todo riesgo", 10000, "premium","rus.png")
-const seguro3 = new Seguro(3, "Rio Uruguay Seguros", "completo", 12000, "premium","rus.png")
-const seguro4 = new Seguro(4, "Sancor Seguros", "basico", 9000, "economico","ss.png")
-const seguro5 = new Seguro(5, "Sancor Seguros", "todo riesgo", 12000, "premium","ss.png")
-const seguro6 = new Seguro(6, "Sancor Seguros", "completo", 15000, "premium","ss.png")
-const seguro7 = new Seguro(7, "La nueva seguros", "basico", 7000, "economico","ln.png")
-const seguro8 = new Seguro(8, "La nueva seguros", "todo riesgo", 9000, "premium","ln.png")
-const seguro9 = new Seguro(9, "La nueva seguros", "completo", 10000, "premium","ln.png")
-
-
-
-
+    restarCantidad(){
+        this.cantidad = this.cantidad - 1
+        return this.cantidad
+    }
+}  
 let listado = []
-
-if(localStorage.getItem("listado")){
-    
-    listado = JSON.parse(localStorage.getItem("listado"))
-    
-}else{
-    console.log("Entra por primera vez, set array")
-    listado.push(seguro1, seguro2, seguro3, seguro4, seguro5, seguro6, seguro7, seguro8, seguro9)
+const cargarlistado = async () => {
+    const respuesta = await fetch("seguros.json")
+    const data = await respuesta.json()
+    console.log(data)
+    for (let seguro of data){
+        let seguroNuevo = new Seguro(seguro.id, seguro.empresa, seguro.nombre, seguro.precio, seguro.tipo, seguro.imagen)
+        listado.push(seguroNuevo)
+    }
     localStorage.setItem("listado", JSON.stringify(listado))
 }
+
+
+
+if(localStorage.getItem("listado")){
+    for (let seguro of JSON.parse(localStorage.getItem("listado"))){
+        let seguroNuevo = new Seguro(seguro.id, seguro.empresa, seguro.nombre, seguro.precio, seguro.tipo, seguro.imagen)
+        listado.push(seguroNuevo)
+    }
+    
+}else{
+    console.log("Entra por primera vez, seteamos el array")
+    cargarlistado()
+    
+}
+

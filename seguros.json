@@ -1,0 +1,85 @@
+[
+    {
+        "id": 1,
+        "empresa":"Rio Uruguay Seguros",
+        "nombre":"basico",
+        "precio":8000,
+        "tipo": "economico",
+        "imagen": "rus.png"
+    }
+    ,
+    {
+        "id": 2,
+        "empresa":"Rio Uruguay Seguros",
+        "nombre":"todo riesgo",
+        "precio":10000,
+        "tipo": "premium",
+        "imagen": "rus.png"
+    }
+    ,
+    {
+        "id": 3,
+        "empresa":"Rio Uruguay Seguros",
+        "nombre":"completo",
+        "precio":12000,
+        "tipo": "premium",
+        "imagen": "rus.png"
+    }
+    ,
+    {
+        "id": 4,
+        "empresa":"Sancor Seguros",
+        "nombre":"basico",
+        "precio":9000,
+        "tipo": "economico",
+        "imagen": "ss.png"
+    }
+    ,
+
+    {
+        "id": 5,
+        "empresa":"Sancor Seguros",
+        "nombre":"todo riesgo",
+        "precio":12000,
+        "tipo": "premium",
+        "imagen": "ss.png"
+    }
+    ,
+    {
+        "id": 6,
+        "empresa":"Sancor Seguros",
+        "nombre":"completo",
+        "precio":15000,
+        "tipo": "premium",
+        "imagen": "ss.png"
+    }
+    ,
+    {
+        "id": 7,
+        "empresa":"La nueva seguros",
+        "nombre":"basico",
+        "precio":7000,
+        "tipo": "economico",
+        "imagen": "ln.png"
+    }
+    ,
+    {
+        "id": 8,
+        "empresa":"La nueva seguros",
+        "nombre":"todo riesgo",
+        "precio":9000,
+        "tipo": "premium",
+        "imagen": "ln.png"
+    }
+    ,
+    {
+        "id": 9,
+        "empresa":"La nueva seguros",
+        "nombre":"completo",
+        "precio":10000,
+        "tipo": "premium",
+        "imagen": "ln.png"
+    }
+    
+    
+]

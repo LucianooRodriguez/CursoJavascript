@@ -6,7 +6,7 @@ let ocultarListadoBtn = document.getElementById("botonOcultar");
 let buscador = document.getElementById("buscador");
 let modalCotizadorSeguros = document.getElementById("modal-bodyCotizador")
 let agregarSeguro = document.getElementById("botonCotizador")
-let calcuTotal = document.getElementById("preTotal")
+let calcuTotal = document.getElementById("precioTotal")
 let loader = document.getElementById("load")
 let dia = document.getElementById("dia")
 let compraFin = document.getElementById("botonFinalizarCompra")
@@ -25,11 +25,11 @@ function desplegarListado(array) {
             <p class = "card-e">Nombre: ${seg.nombre}</p>
             <p class="card-e">Precio: $${seg.precio}</p>
             <p class="card-e">Tipo: ${seg.tipo}</p>
-        <button id="agregarSegCotizador${seg.id}" class="btn btn-outline-primary">Agregar al cotizador</button>
+        <button id="agregarCotizador${seg.id}" class="btn btn-outline-primary">Agregar al cotizador</button>
         </div>
     </div> `;
         segsDiv.appendChild(nuevoSeguroDiv);
-        let agregarC = document.getElementById(`agregarSegCotizador${seg.id}`);
+        let agregarC = document.getElementById(`agregarCotizador${seg.id}`);
 
         agregarC.addEventListener("click", () => {
             agregarSegCotizador(seg);
@@ -58,26 +58,26 @@ function buscarSeg(buscado, array) {
 }
 
 //funciones de filtrado
-function filtrarPorEmpresa(array) {
-    let utiBuscada = "Empresa"
-    let busqueda = array.filter(
-        (seg) => seg.empresa.toLowerCase() == utiBuscada.toLocaleLowerCase()
-    );
-    desplegarListado(busqueda);
-}
-
-function filtrarPorNombre(array) {
-    let utiBuscada = "Nombre"
+function filtrarPorBasico(array) {
+    let utiBuscada = "Basico"
     let busqueda = array.filter(
         (seg) => seg.nombre.toLowerCase() == utiBuscada.toLocaleLowerCase()
     );
     desplegarListado(busqueda);
 }
 
-function filtrarPorTipo(array) {
-    let utiBuscada = "Tipo"
+function filtrarPorTodoRiesgo(array) {
+    let utiBuscada = "TodoRiesgo"
     let busqueda = array.filter(
-        (seg) => seg.tipo.toLowerCase() == utiBuscada.toLocaleLowerCase()
+        (seg) => seg.nombre.toLowerCase() == utiBuscada.toLocaleLowerCase()
+    );
+    desplegarListado(busqueda);
+}
+
+function filtrarPorCompleta(array) {
+    let utiBuscada = "Completa"
+    let busqueda = array.filter(
+        (seg) => seg.nombre.toLowerCase() == utiBuscada.toLocaleLowerCase()
     );
     desplegarListado(busqueda);
 }
@@ -127,7 +127,7 @@ function agregarSegCotizador(seg) {
             confirmButtonColor: "blue",
             confirmButtonText: "Gracias",
             timer: 2500,
-            imageUrl: `assests/${seg.imagen}`,
+            imageUrl: `assets/${seg.imagen}`,
             imageHeight: 250
         })
     } else {

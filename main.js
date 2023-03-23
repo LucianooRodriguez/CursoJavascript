@@ -48,13 +48,7 @@ function buscarSeg(buscado, array) {
     busquedaListado.length == 0 ?
         (coincidir.innerHTML = `<h4> No hay coincidencias con la busqueda solicitada</h4>`, desplegarListado(busquedaListado)) : (coincidir.innerHTML = "", desplegarListado(busquedaListado))
     return busquedaListado
-    // if (busquedaListado.length == 0) {
-    //     coincidir.innerHTML = `<h4> No hay coincidencias con la busqueda</h4>`;
-    //     desplegarListado(busquedaListado);
-    // } else {
-    //     coincidir.innerHTML = "";
-    //     desplegarListado(busquedaListado);
-    // }
+    
 }
 
 //funciones de filtrado
@@ -67,7 +61,7 @@ function filtrarPorBasico(array) {
 }
 
 function filtrarPorTodoRiesgo(array) {
-    let utiBuscada = "TodoRiesgo"
+    let utiBuscada = "Todo Riesgo"
     let busqueda = array.filter(
         (seg) => seg.nombre.toLowerCase() == utiBuscada.toLocaleLowerCase()
     );
@@ -75,7 +69,7 @@ function filtrarPorTodoRiesgo(array) {
 }
 
 function filtrarPorCompleta(array) {
-    let utiBuscada = "Completa"
+    let utiBuscada = "Completo"
     let busqueda = array.filter(
         (seg) => seg.nombre.toLowerCase() == utiBuscada.toLocaleLowerCase()
     );
@@ -282,13 +276,13 @@ buscador.addEventListener("input", () => {
 selecOrden.addEventListener("change", () => {
     if (selecOrden.value == 1) {
         let list = buscarSeg(buscador.value.toLocaleLowerCase(), listado)
-        filtrarPorEmpresa(list);
+        filtrarPorBasico(list);
     } else if (selecOrden.value == 2) {
         let list = buscarSeg(buscador.value.toLocaleLowerCase(), listado)
-        filtrarPorNombre(list);
+        filtrarPorTodoRiesgo(list);
     } else if (selecOrden.value == 3) {
         let list = buscarSeg(buscador.value.toLocaleLowerCase(), listado)
-        filtrarPorTipo(list);
+        filtrarPorCompleta(list);
     } else if (selecOrden.value == 4) {
         let list = buscarSeg(buscador.value.toLocaleLowerCase(), listado)
         ordenMenoraMayor(list);

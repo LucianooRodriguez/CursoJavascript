@@ -148,21 +148,21 @@ function cargarSeguroCotizador(array) {
     array.forEach((segurosEnCotizador) => {
         modalCotizadorSeguros.innerHTML +=
             `
-        <div class="card border-primary mb-3" id ="productoCarrito${segurosEnCotizador.id}" style="max-width: 540px;">
-        <img class="card-img-top" height="250px" src="assests/${segurosEnCotizador.imagen}" alt="">
+        <div class="card border-primary mb-3" id ="seguroCotizador${segurosEnCotizador.id}" style="max-width: 540px;">
+        <img class="card-img-top" height="250px" src="assets/iconos/${segurosEnCotizador.imagen}" alt="">
         <div class="card-body">
             <h4 class="card-title">${segurosEnCotizador.empresa}</h4>
                 <p class="card-text">Precio por unidad: $${segurosEnCotizador.precio}</p> 
                 <p class="card-text">Cantidad de unidades: ${segurosEnCotizador.cantidad}</p>
                 <p class="card-text">SubTotal: ${segurosEnCotizador.cantidad * segurosEnCotizador.precio}</p>
-                <button class= "btn" id="botonEliminar${segurosEnCotizador.id}"><i class="fas fa-trash-alt"><img class= "basura" src = "./assests/iconos/basura.png"></i></button>
+                <button class= "btn" id="botonEliminar${segurosEnCotizador.id}"><i class="fas fa-trash-alt"><img class= "basura" src = "assets/iconos/basura.png"></i></button>
                 <button class= "btn btn-success" id="botonSumarUnidad${segurosEnCotizador.id}"><i class=""></i>+1</button>
                 <button class= "btn btn-danger" id="botonEliminarUnidad${segurosEnCotizador.id}"><i class=""></i>-1</button> 
         
         </div>
         </div>
         <div class="row ml-ato">
-            <p id="preTotal"></p>
+            <p id="precioTotal"></p>
         </div>`
     })
     calcularTotal(array)

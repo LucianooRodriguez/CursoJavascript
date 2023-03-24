@@ -69,7 +69,7 @@ function filtrarPorTodoRiesgo(array) {
 }
 
 function filtrarPorCompleta(array) {
-    let utiBuscada = "Completo"
+    let utiBuscada = "Completa"
     let busqueda = array.filter(
         (seg) => seg.nombre.toLowerCase() == utiBuscada.toLocaleLowerCase()
     );
@@ -213,7 +213,7 @@ function finalizarCompra() {
         showCancelButton: true,
         confirmButtonText: 'Sí, estoy seguro',
         cancelButtonText: 'No, no quiero',
-        confirmButtonColor: 'blue',
+        confirmButtonColor: 'green',
         cancelButtonColor: 'red',
     }).then((result) => {
         if (result.isConfirmed) {
@@ -300,40 +300,6 @@ compraFin.addEventListener("click", () => {
 
 
 
-
-
-// function mostrarCotizador() {
-//     let cotizador = document.getElementById("modal-bodyCotizador");
-//     cotizador.innerHTML = "<ul>";
-//     segurosCotizador.forEach((seg) => {
-//         cotizador.innerHTML += `
-//         <div id="${seg.id}" class="card" style="width: 18rem;">
-//         <img class="card-img-top img-fluid" style="height: 200px;"src="assets/iconos/${seg.imagen}" alt="">
-//         <div class="card-body">.
-
-//             <h4 class="card-e">${seg.empresa}</h4>
-//             <p class = "card-e">Nombre: ${seg.nombre}</p>
-//             <p class="card-e">Precio: $${seg.precio}</p>
-//             <p class="card-e">Tipo: ${seg.tipo}</p>
-//         <button id="agregarSegCotizador${seg.id}" class="btn btn-outline-primary">Agregar al cotizador</button>
-//         </div>
-//     </div> `;
-//     })
-//     cotizador.innerHTML += "<ul>";
-// }
-
-
-
-
-
-// function agregarSegCotizador(seg) {
-//     console.log(
-//         `Usted sumo a su cotizador de seguros un ${seg.empresa} de nombre  ${seg.nombre} que tiene un valor de : $${seg.precio}`
-//     );
-//     segurosCotizador.push(seg);
-//     console.log(segurosCotizador);
-//     localStorage.setItem("cotizador", JSON.stringify(segurosCotizador));
-// }
 
 
 

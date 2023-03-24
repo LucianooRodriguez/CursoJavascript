@@ -56,11 +56,19 @@ color: rgb(35, 42, 78);
 }
 
 .cotiza{
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
+    
 }
 
 .basura{ 
     width: 15px;
     height: 15px;
+}
+
+#botonCotizador{
+    color: white;
+    font-weight: bolder;
+    background-color:rgb(78, 171, 173) ;
+    border:4px solid rgb(10, 76, 142);
 }

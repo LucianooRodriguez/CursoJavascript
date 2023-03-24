@@ -20,7 +20,7 @@
     {
         "id": 3,
         "empresa":"Rio Uruguay Seguros",
-        "nombre":"completo",
+        "nombre":"completa",
         "precio":12000,
         "tipo": "premium",
         "imagen": "rus.png"
@@ -48,7 +48,7 @@
     {
         "id": 6,
         "empresa":"Sancor Seguros",
-        "nombre":"completo",
+        "nombre":"completa",
         "precio":15000,
         "tipo": "premium",
         "imagen": "ss.png"
@@ -75,7 +75,7 @@
     {
         "id": 9,
         "empresa":"La nueva seguros",
-        "nombre":"completo",
+        "nombre":"completa",
         "precio":10000,
         "tipo": "premium",
         "imagen": "ln.png"

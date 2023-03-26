@@ -146,6 +146,8 @@ function cargarSeguroCotizador(array) {
         <img class="card-img-top" height="250px" src="assets/iconos/${segurosEnCotizador.imagen}" alt="">
         <div class="card-body">
             <h4 class="card-title">${segurosEnCotizador.empresa}</h4>
+                <p class="card-text">Nombre: ${segurosEnCotizador.nombre}</p>
+                <p class="card-text">Tipo: ${segurosEnCotizador.tipo}</p> 
                 <p class="card-text">Precio por unidad: $${segurosEnCotizador.precio}</p> 
                 <p class="card-text">Cantidad de unidades: ${segurosEnCotizador.cantidad}</p>
                 <p class="card-text">SubTotal: ${segurosEnCotizador.cantidad * segurosEnCotizador.precio}</p>
